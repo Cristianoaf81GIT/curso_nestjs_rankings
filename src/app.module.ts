@@ -1,8 +1,18 @@
 import { Module } from '@nestjs/common';
+import { RankingsModule } from './rankings/rankings.module';
+import { ConfigModule } from '@nestjs/config';
+import { MongooseModule } from '@nestjs/mongoose';
+import { MongooseConfigClass } from './config/database/mongoose.config.class';
 
-// cont em 11:14s
+
 @Module({
-  imports: [],
+  imports: [
+    ConfigModule.forRoot({ isGlobal: true }),
+    MongooseModule.forRootAsync({
+      useClass: MongooseConfigClass
+    }),
+    RankingsModule
+  ],
   controllers: [],
   providers: [],
 })
