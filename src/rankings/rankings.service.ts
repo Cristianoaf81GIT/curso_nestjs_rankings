@@ -1,12 +1,12 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { lastValueFrom } from 'rxjs';
 import { InjectModel } from '@nestjs/mongoose';
-import { Partida } from './intefaces/partida.interface';
-import { Ranking } from './intefaces/ranking.schema';
+import { Partida } from './interfaces/partida.interface';
+import { Ranking } from './interfaces/ranking.schema';
 import { Model } from 'mongoose';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
 import { ClientProxySmartRanking } from '../proxyrmq/proxyrmq.service';
-import { Categoria } from './intefaces/categoria.interface';
+import { Categoria } from './interfaces/categoria.interface';
 import { EventoNome } from './evento-nome.enum';
 
 @Injectable()
