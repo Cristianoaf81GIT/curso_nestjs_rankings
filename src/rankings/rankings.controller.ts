@@ -1,6 +1,6 @@
 import { Controller, Logger } from '@nestjs/common';
 import { Ctx, EventPattern, Payload, RmqContext, RpcException } from '@nestjs/microservices';
-import { Partida } from './intefaces/partida.interface';
+import { Partida } from './interfaces/partida.interface';
 import { RankingsService } from './rankings.service';
 
 
