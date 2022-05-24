@@ -1,6 +1,6 @@
 import { DynamicModule, Module } from '@nestjs/common';
 import { AsyncModelFactory, MongooseModule } from '@nestjs/mongoose';
-import { RankingSchema } from '../intefaces/ranking.schema';
+import { RankingSchema } from '../interfaces/ranking.schema';
 
 
 const features: AsyncModelFactory[] = [
